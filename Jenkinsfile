@@ -21,8 +21,6 @@ pipeline {
     post {
         always {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './doc/html', reportFiles: 'index.html', reportName: 'Device Automation Framework', reportTitles: 'Device Test Framework'])
-        }       
-        always {
             emailext body: 'Summary of pipeline status', subject: 'pipeline status', to: 'songsonyyu@gmail.com'
         }
     }
