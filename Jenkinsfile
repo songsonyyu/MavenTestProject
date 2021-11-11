@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build Application'
+                echo 'Build H1 Firmware'
+            }
+        }
+        stage('Flash') {
+            steps {
+                echo 'Flash Artifacts'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test Application'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy Application'
+                echo 'Run Tests'
             }
         }
     }
